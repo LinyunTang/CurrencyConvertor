@@ -22,7 +22,7 @@
             decimalPlaces: (NSNumber*) places;
 
 -(NSString*) description; //print out whatever you need to debug.
--(NSString*) format: (NSNumber*) quantity; //formate the symbols into NSNumber
+-(NSString*) format: (NSNumber*) quantity;
 +(NSArray*) allCurrency;
 
 

@@ -80,8 +80,12 @@
   ExchangeRate* exchangeRate = [[ExchangeRate alloc] initWithHome: homeCurrency  Foreign:foreignCurrency];
   
   [exchangeRate fetch];
-  self.foreignLabel.text = [exchangeRate exchangeToForeign:@(self.homeTextField.text.floatValue)];
+  NSString* result = [exchangeRate exchangeToForeign:@(self.homeTextField.text.floatValue)];
+  self.foreignLabel.text = [foreignCurrency format: @(result.floatValue)];
+
+  // self.foreignLabel.text = [exchangeRate exchangeToForeign:@(self.homeTextField.text.floatValue)];
   
+  //[foreignCurrency format: [NSNumber numberFromString:result]];
   NSLog(@"Convert Button Pressed");
   
 }

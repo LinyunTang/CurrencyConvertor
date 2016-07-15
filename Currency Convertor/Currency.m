@@ -12,6 +12,8 @@
 @synthesize name;
 @synthesize alphaCode;
 @synthesize symbol;
+@synthesize formatter;
+@synthesize decimal;
 
 
 
@@ -25,7 +27,14 @@
     self.name = aName;
     self.alphaCode = aCode;
     self.symbol = aSymbol;
-   // self.       = places;
+   self.decimal  = places;
+    
+    
+    self.formatter = [[NSNumberFormatter alloc] init];
+    self.formatter.numberStyle = kCFNumberFormatterCurrencyStyle;
+    self.formatter.currencySymbol = aSymbol;
+    self.formatter.maximumFractionDigits = places.unsignedIntegerValue;
+    self.formatter.roundingMode = kCFNumberFormatterRoundHalfUp;
   }
   return self;
 }
@@ -36,10 +45,23 @@
   return [NSString stringWithFormat:@ "name%@ alphaCode%@ symbol%@", self.name, self.alphaCode, self.symbol];
 }
 
+//maximumFractionDigits
+//roundingIncrement
+
+
 //formate the symbols into NSNumber
 -(NSString*) format: (NSNumber*) quantity{
-  
-  return [NSString stringWithFormat:@"%@ %@ ", self.formatter, self.symbol];
+/* quantity = self.decimal;
+ self.formatter = [[NSNumberFormatter alloc] init];
+ self.formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+ return [formatter stringFromNumber:quantity];*/
+  //[formatter release];
+  //return [NSString stringWithFormat:@"%@ %@ ", self.formatter, self.symbol];
+  //return [NSString stringWithFormat:@"%@", quantity];
+  //NSLog(@"%@", [self.formatter stringFromNumber:n]);
+
+ return [self.formatter stringFromNumber:quantity];
+
 }
 
 +(NSArray*) allCurrency
