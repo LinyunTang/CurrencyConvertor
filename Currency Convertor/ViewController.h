@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExchangeRate.h"
+#import "Currency.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 
 @end

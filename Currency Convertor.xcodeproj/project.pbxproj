@@ -15,6 +15,8 @@
 		13F029AC1D369666004BC6F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F029AA1D369666004BC6F6 /* LaunchScreen.storyboard */; };
 		13F029B71D369667004BC6F6 /* Currency_ConvertorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F029B61D369667004BC6F6 /* Currency_ConvertorTests.m */; };
 		13F029C21D369667004BC6F6 /* Currency_ConvertorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F029C11D369667004BC6F6 /* Currency_ConvertorUITests.m */; };
+		13F029D11D369943004BC6F6 /* ExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F029D01D369943004BC6F6 /* ExchangeRate.m */; };
+		13F029D41D369962004BC6F6 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F029D31D369962004BC6F6 /* Currency.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		13F029BD1D369667004BC6F6 /* Currency ConvertorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Currency ConvertorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F029C11D369667004BC6F6 /* Currency_ConvertorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Currency_ConvertorUITests.m; sourceTree = "<group>"; };
 		13F029C31D369667004BC6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F029CF1D369943004BC6F6 /* ExchangeRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeRate.h; sourceTree = "<group>"; };
+		13F029D01D369943004BC6F6 /* ExchangeRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeRate.m; sourceTree = "<group>"; };
+		13F029D21D369962004BC6F6 /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		13F029D31D369962004BC6F6 /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,10 @@
 				13F029A21D369666004BC6F6 /* ViewController.h */,
 				13F029A31D369666004BC6F6 /* ViewController.m */,
 				13F029A51D369666004BC6F6 /* Main.storyboard */,
+				13F029CF1D369943004BC6F6 /* ExchangeRate.h */,
+				13F029D01D369943004BC6F6 /* ExchangeRate.m */,
+				13F029D21D369962004BC6F6 /* Currency.h */,
+				13F029D31D369962004BC6F6 /* Currency.m */,
 				13F029A81D369666004BC6F6 /* Assets.xcassets */,
 				13F029AA1D369666004BC6F6 /* LaunchScreen.storyboard */,
 				13F029AD1D369666004BC6F6 /* Info.plist */,
@@ -270,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F029D11D369943004BC6F6 /* ExchangeRate.m in Sources */,
 				13F029A41D369666004BC6F6 /* ViewController.m in Sources */,
 				13F029A11D369666004BC6F6 /* AppDelegate.m in Sources */,
 				13F0299E1D369666004BC6F6 /* main.m in Sources */,
+				13F029D41D369962004BC6F6 /* Currency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
