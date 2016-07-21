@@ -99,7 +99,9 @@
   ExchangeRate* exchangeRate = [[ExchangeRate alloc] initWithHome: homeCurrency  Foreign:foreignCurrency];
   
   [exchangeRate update];
-  self.foreignLabel.text = [exchangeRate exchangeToForeign:@(self.homeTextField.text.floatValue)];
+  //self.foreignLabel.text = [exchangeRate exchangeToForeign:@(self.homeTextField.text.floatValue)];
+  NSString* result = [exchangeRate exchangeToForeign:@(self.homeTextField.text.floatValue)];
+  self.foreignLabel.text = [foreignCurrency format: @(result.floatValue)];
   
 }
 
@@ -109,7 +111,9 @@
   Currency* foreignCurrency = [[Currency allCurrency] objectAtIndex:[self.foreignScroll selectedRowInComponent:0]];
   ExchangeRate* exchangeRate = [[ExchangeRate alloc] initWithHome: homeCurrency  Foreign:foreignCurrency];
   
-  self.homeTextField.text = self.foreignLabel.text;
+  // - substringFromIndex:
+
+  self.homeTextField.text = [self.foreignLabel.text substringFromIndex:1];
   [exchangeRate reverse];
   self.foreignLabel.text = [exchangeRate exchangeToForeign:@(self.homeTextField.text.floatValue)];
   NSLog(@"switch button on!");
